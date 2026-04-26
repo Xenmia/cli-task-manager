@@ -2,15 +2,10 @@ package com.example;
 
 public class Task {
 
-  // Fields (instance variables) - what a task has
   private String description;
   private boolean completed;
   private boolean priority;
-  // Future extensions: private LocalDate dueDate;
-  // private int priority;
-  // private String category;
 
-  // Constructor(s)
   public Task(String description) {
     this.description = description;
     this.completed = false;
@@ -42,4 +37,5 @@ public class Task {
   public void setPriority(boolean priority) {
     this.priority = priority;
   }
+
 }

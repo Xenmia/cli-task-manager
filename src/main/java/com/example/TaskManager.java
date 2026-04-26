@@ -14,13 +14,13 @@ public class TaskManager {
 
     while (running) {
       System.out.print("TaskManager> ");
-      String input = scanner.nextLine().trim(); // make it case-insensitive
+      String input = scanner.nextLine().trim().toLowerCase();
 
       if (input.isEmpty()) {
-        continue; // just press Enter → reprompt
+        continue; // just press Enter -> reprompt
       }
 
-      String[] parts = input.split(" ", 2); // split into command + rest
+      String[] parts = input.split(" ", 2); // split into command + the rest
       String command = parts[0].toLowerCase();
       String arguments = parts.length > 1 ? parts[1] : "";
 
@@ -68,7 +68,6 @@ public class TaskManager {
 
         default:
           System.out.println("Error: Invalid input, try again...");
-          continue;
       }
     }
 
@@ -111,7 +110,7 @@ public class TaskManager {
           break;
 
         default:
-          System.out.println("Error: unkown command '" + comm + "'");
+          System.out.println("Error: unknown command '" + comm + "'");
           break;
       }
     }

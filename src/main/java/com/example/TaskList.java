@@ -8,21 +8,17 @@ public class TaskList {
   public static final String BOLD = "\u001B[1m";
   public static final String RESETBOLD = "\u001B[0m";
 
-  // Field - the list that holds all tasks
-  private TaskStorage storage;
-  private List<Task> tasks;
+  private final TaskStorage storage;
+  private final List<Task> tasks;
 
-  // Constructor
   public TaskList() {
     this.storage = new TaskStorage();
     this.tasks = storage.getTasks();
   }
 
-  // Methods - what you can do with the list
   public void addTask(Task task) {
     this.tasks.add(task);
   }
-  // or: public void addTask(String description) { ... } // creates Task inside
 
   public void removeTask(int index) {
     if (checkIndex(index)) {
@@ -45,19 +41,6 @@ public class TaskList {
     }
   }
 
-  public Task getTask(int index) {
-    return this.tasks.get(index);
-  }
-
-  public int getSize() {
-    return this.tasks.size();
-  }
-
-  public boolean isEmpty() {
-    return this.tasks.isEmpty();
-  }
-
-  // Useful: list all tasks
   public void displayTasks() {
     if (this.tasks.isEmpty()) {
       System.out.println("The Task List is empty.\n");
