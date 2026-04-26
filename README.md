@@ -1,11 +1,30 @@
-A simple cli task manager project to get familiar with Java, OOP, GSON and I/O
+# CLI Task Manager
 
-Usage:
-    - list/ls/view: shows the current list of tasks (usage: ls)
-    - add: adds a task to the task list (usage: add <task-content> [flags])
-        - -p/--priority: immediately marks the task as high priority at creation (usage: add <task-content> -p)
-        - -c/--completed: immediately marks the task as completed at creation (usage: add <task-content> -c)
-    - remove/rm: removes a task(usage: rm <index>)
-    - complete/comp: marks a task as completed (usage: comp <index>)
-    - priority/pr: toggles the task's priority status (usage: pr <index>)
-    - exit/quit/q: leaves the programs (usage: q)
+A simple command-line task manager built to explore **Java**, **OOP**, **GSON**, and **I/O**.
+
+---
+
+## Usage
+
+### Viewing Tasks
+
+| Command | Description | Example |
+|---------|-------------|---------|
+| `list` / `ls` / `view` | Show all current tasks | `ls` |
+
+### Managing Tasks
+
+| Command | Description | Example |
+|---------|-------------|---------|
+| `add` | Add a new task | `add Buy groceries` |
+| `remove` / `rm` | Remove a task by index | `rm 2` |
+| `complete` / `comp` | Mark a task as completed | `comp 1` |
+| `priority` / `pr` | Toggle a task's priority status | `pr 3` |
+| `exit` / `quit` / `q` | Exit the program | `q` |
+
+### `add` Flags
+
+| Flag | Description | Example |
+|------|-------------|---------|
+| `-p` / `--priority` | Mark as high priority on creation | `add Buy groceries -p` |
+| `-c` / `--completed` | Mark as completed on creation | `add Buy groceries -c` |
