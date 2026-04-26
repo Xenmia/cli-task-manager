@@ -12,7 +12,10 @@ import com.google.gson.reflect.TypeToken;
 public class TaskStorage {
   private final Gson gson = new Gson();
   private List<Task> tasks;
-  private static final String FOLDER_PATH = "learning/src/main/resources/Data/";
+  private static final String FOLDER_PATH = System.getProperty(
+          "app.data.dir",
+          System.getProperty("user.home") + "/myapp/data/" // default fallback
+  ) + "/";
   private static final String FILE_NAME = "tasks.json";
 
   public TaskStorage() {
